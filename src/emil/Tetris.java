@@ -2,7 +2,9 @@ package emil;
 import javax.swing.JFrame;
 
 public class Tetris extends JFrame {
-		final static protected int aik = 2;
+	
+	final static protected int aik = 2;
+	
 	public Tetris () {
 		Board board = new Board();
 		add(board);
