@@ -14,6 +14,7 @@ public class Tetris extends JFrame {
 	public static void main(String[] args) {
 		Tetris game = new Tetris();
 		game.setVisible(true);
+		int aik = 2;
 
 	}
 
