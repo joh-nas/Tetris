@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 
 public class Board extends JPanel {
 	private final int BlockSize = 40;
+
 	protected Board () {
 		setFocusable(true);
 		setPreferredSize(new Dimension(400, 800));
