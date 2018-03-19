@@ -11,9 +11,9 @@ import javax.swing.Timer;
 public class Board extends JPanel implements ActionListener 
 {
 	private final int BlockSize = 40;
-	Timer tm = new Timer(100, this);
+	Timer tm = new Timer(75, this);
 	int x = 5, y = 0;
-	int msBeforeDrop = 5;
+	int actionEventsBeforeDrop = 15;
 	private KeyManager keyManager;
 
 	protected Board() {
@@ -33,10 +33,10 @@ public class Board extends JPanel implements ActionListener
 	public void actionPerformed(ActionEvent e) {
 		if (keyManager.left) x -= 1;
 		if (keyManager.right) x += 1;
-		msBeforeDrop --;
-		if(msBeforeDrop <= 0) {
+		actionEventsBeforeDrop --;
+		if(actionEventsBeforeDrop <= 0) {
 			y += 1;
-			msBeforeDrop = 5;
+			actionEventsBeforeDrop = 15;
 		}
 		repaint();
 	}
