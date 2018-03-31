@@ -34,7 +34,7 @@ public class Board extends JPanel implements ActionListener
 		if (keyManager.left) x -= 1;
 		if (keyManager.right) x += 1;
 		actionEventsBeforeDrop --;
-		if(actionEventsBeforeDrop <= 0) {
+		if(actionEventsBeforeDrop <= 0 || keyManager.space ) {
 			y += 1;
 			actionEventsBeforeDrop = 15;
 		}
@@ -47,11 +47,11 @@ public class Board extends JPanel implements ActionListener
 		drawRect(x + 1, y, g);
 		drawRect(x, y + 1, g);
 
-		drawRect(0, 19, g);
-		drawRect(1, 19, g);
-		drawRect(1, 18, g);
-		drawRect(2, 18, g);
-
+//		drawRect(0, 19, g);
+//		drawRect(1, 19, g);
+//		drawRect(1, 18, g);
+//		drawRect(2, 18, g);
+//
 	}
 
 	private void drawRect(int x, int y, Graphics g) {
